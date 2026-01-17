@@ -7,15 +7,14 @@ const CountConnect = () => {
   console.log("Num of connections", numConnection);
 };
 const checkOverLoad = () => {
-
   setInterval(() => {
     const numConnection = mongoose.connections.length;
-    console.log('Number Activity', numConnection)
+    console.log("Number Activity", numConnection);
     const numCores = os.cpus().length;
     const memoryUsage = process.memoryUsage().rss;
     console.log(`Memory Ussage ${memoryUsage / 1024 / 1024} MB`);
     const maxConnections = numCores * 5;
-    console.log('max Connections',maxConnections);
+    console.log("max Connections", maxConnections);
     if (numCores > maxConnections) {
       console.log("Connnection Over Detected");
     }
