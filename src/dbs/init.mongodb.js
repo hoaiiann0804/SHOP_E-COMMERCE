@@ -6,7 +6,7 @@ const {
     db: { host, port, name },
   } = config;
 const StringConnection = `mongodb://${host}:${port}/${name}`;
-console.log('StringConnection',StringConnection)
+// console.log('StringConnection',StringConnection)
 class Database {
   constructor() {
     this.connect();
