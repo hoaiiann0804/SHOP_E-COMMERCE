@@ -28,7 +28,7 @@ const dev = {
 
 const pro = {
   app: {
-    port: process.env.PRO_APP_PORT || 8000 ,
+    port: process.env.PRO_APP_PORT || 8081 ,
   },
   db: {
     host: process.env.PRO_DB_HOST || 'localhost',
