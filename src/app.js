@@ -6,6 +6,12 @@ const helmet = require("helmet");
 const app = express();
 
 console.log("Process", process.env);
+app.use(express.json());
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 
 app.use(morgan("dev")); //  su dung cho Dev
 // app.use(morgan("combined")); //su dung cho production
